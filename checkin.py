@@ -20,14 +20,14 @@ if __name__ == '__main__':
     cookies = os.environ.get("COOKIES", []).split("&")
     if cookies[0] != "":
 
-        check_in_url = "https://glados.space/api/user/checkin"        # 签到地址
-        status_url = "https://glados.space/api/user/status"          # 查看账户状态
+        check_in_url = "https://glados.network/api/user/checkin"        # 签到地址
+        status_url = "https://glados.network/api/user/status"          # 查看账户状态
 
-        referer = 'https://glados.space/console/checkin'
-        origin = "https://glados.space"
+        referer = 'https://glados.network/console/checkin'
+        origin = "https://glados.network"
         useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
         payload = {
-            'token': 'glados.one'
+            'token': 'glados.network'
         }
         
         for cookie in cookies:
