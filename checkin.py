@@ -7,7 +7,7 @@ import os
 # -------------------------------------------------------------------------------------------
 if __name__ == '__main__':
 
-    cookies = os.environ.get("GLADOS_COOKIES", []).split("&")
+    cookies = os.environ.get("GLADOS_COOKIES")
     check_in_url = "https://glados.cloud/api/user/checkin"        # 签到地址
     status_url = "https://glados.cloud/api/user/status"          # 查看账户状态
 
@@ -17,10 +17,9 @@ if __name__ == '__main__':
     payload = {
         'token': 'glados.cloud'
     }
-        
-    for cookie in cookies:
-        checkin = requests.post(check_in_url, headers={'cookie': cookie, 'referer': referer, 'origin': origin,
-                                'user-agent': useragent, 'content-type': 'application/json;charset=UTF-8'}, data=json.dumps(payload))
-        state = requests.get(status_url, headers={
-                            'cookie': cookie, 'referer': referer, 'origin': origin, 'user-agent': useragent})
+    checkin = requests.post(check_in_url, headers={'cookie': cookies, 'referer': referer, 'origin': origin,
+                            'user-agent': useragent, 'content-type': 'application/json;charset=UTF-8'}, data=json.dumps(payload))
+    state = requests.get(status_url, headers={
+                        'cookie': cookies, 'referer': referer, 'origin': origin, 'user-agent': useragent})
+
 
