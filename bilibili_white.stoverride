@@ -30,7 +30,7 @@ http:
 
 script-providers:
   bili-bangumi:
-    url: https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili_json.js
+    url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
     interval: 86400
   bili-region:
     url: https://raw.githubusercontent.com/kokoryh/Script/master/js/bili_auto_region.js
