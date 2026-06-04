@@ -24,13 +24,13 @@ http:
       require-body: true
       max-size: 3145728
 
-#    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$
-#      name: bili-proto
-#      type: response
-#      timeout: 30
-#      require-body: true
-#      max-size: 3145728
-#      binary-mode: true
+    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$
+      name: bili-proto
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+      binary-mode: true
 
 #    - match: ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
 #      name: bili-live
