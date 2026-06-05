@@ -1,0 +1,23 @@
+name: "📺 BiliIntl: 🧰 Enhanced"
+desc: 哔哩国际：增强模式                                   （国际版界面自定义及功能增强）
+openUrl: http://boxjs.com/#/app/BiliIntl.Enhanced
+#!author=VirgilClyne
+#!homepage=https://github.com/BiliUniverse
+#!manual=https://github.com/BiliUniverse/Enhanced/wiki
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+
+http:
+  mitm:
+    - "app.biliintl.com"
+  script:
+    - match: ^https?:\/\/app\.biliintl\.com\/intl\/gateway\/v2\/app\/resource\/show\/tab(\?.+)?$
+      name: BiliBili.Enhanced.response
+      type: response
+      require-body: true
+      timeout: 15
+      max-size: 0
+
+script-providers:
+  BiliBili.Enhanced.response:
+    url: https://raw.githubusercontent.com/BiliUniverse/Enhanced/6d4e1629100ef56331eb93ff1ccafc12bbc1bf40/js/BiliIntl.Enhanced.response.beta.js
+    interval: 86400
