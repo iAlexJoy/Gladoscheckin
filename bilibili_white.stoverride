@@ -23,6 +23,7 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
+      argument:
 
     - match: ^https:\/\/api\.bilibili\.com\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?
       name: bili-region
