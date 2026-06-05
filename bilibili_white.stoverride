@@ -16,6 +16,7 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
+      argument:
 
     - match: https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/(?:splash\/(?:list|show|event\/list2)|feed\/index(?:\/story)?|account\/(?:mine(?:\/ipad)?|myinfo)))\?
       name: bili-json
@@ -31,6 +32,7 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
+      argument:
 
   mitm:
     - "grpc.biliapi.net"
