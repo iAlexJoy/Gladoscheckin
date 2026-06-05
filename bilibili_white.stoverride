@@ -17,6 +17,13 @@ http:
       require-body: true
       max-size: 3145728
 
+    - match: https:\/\/app\.bilibili\.com\/x\/(?:resource\/show\/tab\/v2|v2\/(?:splash\/(?:list|show|event\/list2)|feed\/index(?:\/story)?|account\/(?:mine(?:\/ipad)?|myinfo)))\?
+      name: bili-json
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+
     - match: ^https:\/\/api\.bilibili\.com\/(pgc\/view\/v\d\/app\/season|x\/offline\/version)\?
       name: bili-region
       type: response
@@ -30,6 +37,9 @@ http:
 
 script-providers:
   bili-bangumi:
+    url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
+    interval: 86400
+  bili-json:
     url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
     interval: 86400
   bili-region:
