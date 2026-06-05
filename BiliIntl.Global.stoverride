@@ -1,0 +1,59 @@
+name: "📺 BiliIntl: 🌐 Global"
+desc: 哔哩国际：全球模式                                   （国际版内容聚合及自动线路）
+openUrl: http://boxjs.com/#/app/BiliIntl.Global
+author: VirgilClyne
+homepage: https://github.com/BiliUniverse
+manual: https://github.com/BiliUniverse/Global/wiki
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+
+http:
+  mitm:
+    - "www.bilibili.tv"
+    - "app.bilibili.tv"
+    - "app.biliintl.com"
+    - "passport.biliintl.com"
+  script:
+    - match: ^https?:\/\/www\.bilibili\.tv\/([a-z]{2})\/anime?(\?.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+    - match: ^https?:\/\/www\.bilibili\.tv\/([a-z]{2})\/play\/\d+(\/\d+)?(\?.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+    - match: ^https?:\/\/app\.biliintl\.com\/intl\/gateway\/v2\/ogv\/view\/app\/season2(\?.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+    - match: ^https?:\/\/api\.bilibili\.tv\/intl\/gateway\/web\/playurl(\?.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+    - match: ^https?:\/\/app\.biliintl\.com\/intl\/gateway\/v2\/app\/search\/(type|v2)(\?.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+    - match: ^https?:\/\/(app|passport)\.biliintl\.com\/(.+)?$
+      name: BiliBili.Global.request
+      type: request
+      require-body: false
+      timeout: 15
+      argument:
+
+script-providers:
+  BiliBili.Global.request:
+    url: https://raw.githubusercontent.com/BiliUniverse/Global/1bfdb57e2ba731da15928ff17587521799c86efa/js/BiliIntl.Global.request.beta.js
+    interval: 86400
+  BiliBili.Global.response:
+    url: https://raw.githubusercontent.com/BiliUniverse/Global/b4695b77844a000bc8fa321c58e7ba0df11dd47d/js/BiliBili.Global.response.beta.js
+    interval: 86400
