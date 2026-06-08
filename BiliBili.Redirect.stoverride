@@ -46,4 +46,3 @@ script-providers:
   "📺 BiliBili.Redirect.request":
     url: https://gist.github.com/VirgilClyne/0c193c4ff4b930d765b1ca4b406ec1b9/raw/request.bundle.js
     interval: 86400
-
