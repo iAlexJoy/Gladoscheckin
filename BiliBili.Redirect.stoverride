@@ -14,7 +14,9 @@ version: "0.2.20"
 http:
   force-http-engine:
     - "*:4480"
+    - "*:4483"
     - "*:8000"
+    - "*:8082"
     - "*:9102"
   mitm:
     - "*.mcdn.bilivideo.cn"
