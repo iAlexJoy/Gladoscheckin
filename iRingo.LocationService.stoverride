@@ -33,6 +33,7 @@ http:
       name: LocationService.request
       type: request
       require-body: true
+      binary-mode: true
       argument:
     - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
       name: LocationService.request
@@ -44,6 +45,7 @@ http:
       name: LocationService.response
       type: response
       require-body: true
+      binary-mode: true
       argument:
     - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
       name: LocationService.response
