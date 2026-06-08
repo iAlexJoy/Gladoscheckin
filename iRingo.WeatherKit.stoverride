@@ -51,13 +51,13 @@ http:
 
 script-providers:
   WeatherKit.api.v1.availability.response:
-    url: https://github.com/NSRingo/WeatherKit/releases/download/v3.1.0/response.bundle.js
+    url: https://gist.githubusercontent.com/VirgilClyne/862db28df04be7523476d10b61b128f2/raw/response.bundle.js
     interval: 86400
   WeatherKit.api.v1.weather.request:
     url: https://gist.githubusercontent.com/VirgilClyne/862db28df04be7523476d10b61b128f2/raw/request.bundle.js
     interval: 86400
   WeatherKit.api.v2.weather.response:
-    url: https://github.com/NSRingo/WeatherKit/releases/download/v3.1.0/response.bundle.js
+    url: https://gist.githubusercontent.com/VirgilClyne/862db28df04be7523476d10b61b128f2/raw/response.bundle.js
     interval: 86400
   WeatherKit.api.v1.mapOverlay.request:
     url: https://gist.githubusercontent.com/VirgilClyne/862db28df04be7523476d10b61b128f2/raw/request.bundle.js
