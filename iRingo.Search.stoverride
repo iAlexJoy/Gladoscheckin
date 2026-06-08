@@ -1,0 +1,68 @@
+name: " iRingo: 🔍 Search"
+desc: |-
+  iOS 17.6⬇️
+  全面自定义「Siri 建议」功能。
+  ⚠️ 不含自定义「询问 Siri」功能。
+openUrl: "http://boxjs.com/#/app/iRingo.Spotlight"
+author: |-
+  VirgilClyne[https://github.com/VirgilClyne]
+homepage: "https://NSRingo.github.io/guide/Siri/spotlight"
+icon: "https://developer.apple.com/assets/elements/icons/spotlight/spotlight-128x128.png"
+category: " iRingo"
+date: "2024-12-24 04:25:10"
+version: "4.2.7"
+
+http:
+  mitm:
+    - "api*.smoot.apple.com"
+    - "api.smoot.apple.cn"
+  script:
+    - match: ^https?:\/\/api2?\.smoot\.apple\.(com|cn)\/bag
+      name: Siri.request
+      type: request
+      argument:
+    - match: ^https?:\/\/api2?\.smoot\.apple\.(com|cn)\/bag
+      name: Siri.response
+      type: response
+      require-body: true
+      argument:
+    - match: ^https?:\/\/api(2|-.+)\.smoot\.apple\.com\/search
+      name: Siri.request
+      type: request
+      argument:
+    - match: ^https?:\/\/api(2|-.+)\.smoot\.apple\.com\/search
+      name: Siri.response
+      type: response
+      require-body: true
+      argument:
+    - match: ^https?:\/\/api(2|-.+)\.smoot\.apple\.com\/flight
+      name: Siri.request
+      type: request
+      argument:
+    - match: ^https?:\/\/api(2|-.+)\.smoot\.apple\.com\/warm
+      name: Siri.request
+      type: request
+      argument:
+    - match: ^https?:\/\/api(2|-.+)\.smoot\.apple\.com\/render
+      name: Siri.request
+      type: request
+      argument:
+    - match: ^https?:\/\/(api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.visualsearch\.v2\.VisualSearch\/VisualSearch
+      name: Siri.request
+      type: request
+      require-body: true
+      binary-mode: true
+      argument:
+    - match: ^https?:\/\/(api2|api-.*)\.smoot\.apple\.com\/apple\.parsec\.visualsearch\.v2\.VisualSearch\/VisualSearch
+      name: Siri.response
+      type: response
+      require-body: true
+      binary-mode: true
+      argument:
+script-providers:
+  Siri.request:
+    url: https://gist.github.com/VirgilClyne/b5f0de011fabe5637ff53e585e9d061d/raw/request.bundle.js
+    interval: 86400
+  Siri.response:
+    url: https://gist.github.com/VirgilClyne/b5f0de011fabe5637ff53e585e9d061d/raw/response.bundle.js
+    interval: 86400
