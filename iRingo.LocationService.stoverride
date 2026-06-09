@@ -30,25 +30,25 @@ http:
       require-body: true
       argument:
     - match: ^https?:\/\/gsp-ssl\.ls\.apple\.com\/dispatcher\.arpc
-      name: LocationService.request
+      name: LocationService.Dispatcher.arpc.request
       type: request
       require-body: true
       binary-mode: true
       argument:
     - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
-      name: LocationService.request
+      name: LocationService.Dispatcher.request
       type: request
       require-body: true
       binary-mode: true
       argument:
     - match: ^https?:\/\/gsp-ssl\.ls\.apple\.com\/dispatcher\.arpc
-      name: LocationService.response
+      name: LocationService.Dispatcher.arpc.response
       type: response
       require-body: true
       binary-mode: true
       argument:
     - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
-      name: LocationService.response
+      name: LocationService.Dispatcher.response
       type: response
       require-body: true
       binary-mode: true
@@ -58,6 +58,15 @@ script-providers:
   LocationService.response:
     url: https://gist.github.com/VirgilClyne/556f19f40211f839bd5c8d8070504f00/raw/response.bundle.js
     interval: 86400
-  LocationService.request:
+  LocationService.Dispatcher.arpc.request:
     url: https://gist.github.com/VirgilClyne/556f19f40211f839bd5c8d8070504f00/raw/request.bundle.js
+    interval: 86400
+  LocationService.Dispatcher.request:
+    url: https://gist.github.com/VirgilClyne/556f19f40211f839bd5c8d8070504f00/raw/request.bundle.js
+    interval: 86400
+  LocationService.Dispatcher.arpc.response:
+    url: https://gist.github.com/VirgilClyne/556f19f40211f839bd5c8d8070504f00/raw/response.bundle.js
+    interval: 86400
+  LocationService.Dispatcher.response:
+    url: https://gist.github.com/VirgilClyne/556f19f40211f839bd5c8d8070504f00/raw/response.bundle.js
     interval: 86400
