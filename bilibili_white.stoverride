@@ -11,7 +11,7 @@ http:
 
   script:
     - match: ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?)
-      name: bili-bangumi
+      name: bili-json
       type: response
       timeout: 30
       require-body: true
