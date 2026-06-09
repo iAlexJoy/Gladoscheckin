@@ -39,9 +39,6 @@ http:
     - "ap*.bilibili.com"
 
 script-providers:
-  bili-bangumi:
-    url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
-    interval: 86400
   bili-json:
     url: https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
     interval: 86400
