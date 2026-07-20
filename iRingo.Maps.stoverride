@@ -24,6 +24,8 @@ rules:
 
 http:
   mitm:
+    - "*.ls.apple.com"
+    - "*.is.autonavi.com"
     - "configuration.ls.apple.com"
     - "gspe35-ssl.ls.apple.com"
   script:
